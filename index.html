@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <div class="panel__top">
+          <div>
+            <p class="eyebrow">Classic Game</p>
+            <h1>Snake</h1>
+          </div>
+          <div class="scoreboard" aria-live="polite">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+        </div>
+
+        <div class="panel__actions">
+          <button id="pause-button" type="button">Pause</button>
+          <button id="restart-button" type="button">Restart</button>
+        </div>
+
+        <p id="status" class="status">Use arrow keys or WASD to start.</p>
+
+        <div class="board-shell">
+          <div
+            id="board"
+            class="board"
+            role="grid"
+            aria-label="Snake game board"
+          ></div>
+        </div>
+
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button type="button" data-direction="up">Up</button>
+          <div class="mobile-controls__row">
+            <button type="button" data-direction="left">Left</button>
+            <button type="button" data-direction="down">Down</button>
+            <button type="button" data-direction="right">Right</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/game.js"></script>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
